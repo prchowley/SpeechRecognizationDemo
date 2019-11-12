@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     // MARK:- Setup
     func setupAudio() {
+        AudioManager.shared.setup()
         AudioManager.shared.completion = { buffer in
             SpeechRecognizer.shared.process(request: buffer)
         }

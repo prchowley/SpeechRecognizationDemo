@@ -14,7 +14,7 @@ final class AudioManager: NSObject {
     fileprivate var capture: AVCaptureSession?
     var completion: (CMSampleBuffer)->() = {_ in}
 
-    func initialization() {
+    func setup() {
         capture = AVCaptureSession()
     }
     
