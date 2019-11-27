@@ -72,7 +72,7 @@ final class AudioManager: NSObject {
 
 // MARK:- AVCaptureAudioDataOutputSampleBufferDelegate
 extension AudioManager: AVCaptureAudioDataOutputSampleBufferDelegate {
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         completion(sampleBuffer)
     }
 }
